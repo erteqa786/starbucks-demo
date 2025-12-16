@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Aseemakram19/starbucks-kubernetes.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'private git repo url'
             }
         }
         stage("Sonarqube Analysis "){
@@ -43,20 +43,20 @@ pipeline{
                 sh "trivy fs . > trivyfs.txt"
             }
         }
-        stage("Docker Build & Push"){
+        stage("Docker Build & Push"){    ##do not create docker again
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build -t starbucks ."
-                       sh "docker tag starbucks aseemakram19/starbucks:latest "
-                       sh "docker push aseemakram19/starbucks:latest "
+                       sh "docker tag starbucks usernamedocker/starbucks:latest "
+                       sh "docker push dockerusername/starbucks:latest "
                     }
                 }
             }
         }
         stage("TRIVY"){
             steps{
-                sh "trivy image aseemakram19/starbucks:latest > trivyimage.txt" 
+                sh "trivy image dockerusername/starbucks:latest > trivyimage.txt" 
             }
         }
         stage('Deploy to EKS Cluster') {
@@ -68,7 +68,7 @@ pipeline{
                     aws sts get-caller-identity
 
                     echo "Configuring kubectl for EKS cluster..."
-                    aws eks update-kubeconfig --region ap-south-1 --name Cloudaseem
+                    aws eks update-kubeconfig --region ap-south-1 --name EksName  ##EKSCLUSTERNAME
 
                     echo "Verifying kubeconfig..."
                     kubectl config view
@@ -103,9 +103,9 @@ pipeline{
                     <p>Started by: ${buildUser}</p>
                     <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
                 """,
-                to: 'mohdaseemakram19@gmail.com',
-                from: 'mohdaseemakram19@gmail.com',
-                replyTo: 'mohdaseemakram19@gmail.com',
+                to: 'yourgmailid@gmail.com',
+                from: 'yourgmailid@gmail.com',
+                replyTo: 'yourgmailid@gmail.com',
                 mimeType: 'text/html',
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
