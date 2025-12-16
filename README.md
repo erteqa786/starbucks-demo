@@ -1,5 +1,5 @@
-## Hi there! this my new project
-**Welcome to the Starbuck App Deployment project! This project demonstrates how to deploy a StarBucks Clone Next.js application on Kubernetes cluster using modern DevOps tools, practices and following a DevSecOps approach.**
+
+**Welcome to the Clone App Deployment project! This project demonstrates how to deploy a Clone Next.js application on Kubernetes cluster using modern DevOps tools and practices.
 
 ## 🛠️ **Tools & Services Used**
 
@@ -20,42 +20,20 @@
 - Containerize the application using Docker.
 - Build and push Docker images to a container registry.
 - Run the application in a Docker container.
+<img width="1366" height="768" alt="Screenshot (160)" src="https://github.com/user-attachments/assets/c4e3b6f8-d163-48d3-9af1-06ae3c45a596" />
 
-### **Phase 2: Deployment to EKS Cluster with Monitoring**
-- Deploy the application to an **Amazon EKS (Elastic Kubernetes Service)** cluster.
-- Set up **Prometheus** and **Grafana** for monitoring and visualization.
-- Implement **Trivy** for vulnerability scanning and **OWASP** for security best practices.
+
+### **Phase 2: CI/CD Pipeline 
+- Jenkins pipeline creation
+<img width="1366" height="768" alt="Screenshot (159)" src="https://github.com/user-attachments/assets/4b0d86f8-8a07-40bc-9b00-2195f149e706" />
+
+### **Phase 3: SonarQube Testing
+<img width="1366" height="768" alt="Screenshot (158)" src="https://github.com/user-attachments/assets/523eafa7-4b03-434a-bedd-8d84bbd56438" />
+
+### **Phase 4:Monitor server Terraform pipeline
+<img width="1366" height="768" alt="Screenshot (164)" src="https://github.com/user-attachments/assets/df6a7c37-d0c3-49d1-9a19-6fcdc0462416" />
+
+
 
 ---
-
-## 📂 **Code Repository**
-Explore the code and contribute to the project:  
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aseemakram19/starbucks-kubernetes.git)
-
----
-## 📹 **Project Video**
-Watch the step-by-step deployment process:  
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/VPJ4gesLXOc)
-
----
-## 🚀 **Other DevOps Projects**
-
-| **Project**                                | **Video Link**                                                                                   |
-|--------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **JAVA APPLICATION DEPLOYMENT Project**                   | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=R98DHKqAEos) |
-| **Deployment of BINGO in Kubernetes Cluster Monitoring**  | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/j6YxADVF0W8) |
-| **Real-time CICD pipeline Website Jenkins CI CD**         | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/xGWx_cXb9DE) |
-| **DevOps Project , Application deployment on App server via Terraform, Jenkins, SonarQube**                     | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/xGWx_cXb9DE) |
-| **Realtime NODE.js App deployment with PM2 , Shell script, Jenkins, SonarQube ,Github ,Domain SSL cert**                     | [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/MFtUCfQ1RX0) |
-
-## 🤝 **Connect with Me**
-
-Let's connect and discuss DevSecOps  
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammed-aseem-akram/)  
-
-
-
-
-
 
